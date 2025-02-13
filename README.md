@@ -14,4 +14,4 @@
 
 ## Submission
 
-Add, commit, and push your changes.
+Push your branch and open a pull request
