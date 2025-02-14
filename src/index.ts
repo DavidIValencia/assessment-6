@@ -3,6 +3,8 @@ import mongoose from "mongoose"
 import cors from "cors"
 import dotenv from "dotenv"
 
+import ticketsRouter from "./routes/ticketsRouter"
+
 // CONFIGURATIONS
 
 dotenv.config()
@@ -11,6 +13,8 @@ app.use(cors())
 app.use(json())
 
 // ROUTES
+
+app.use("/tickets", ticketsRouter)
 
 // DATABASE CONNECTION
 
@@ -28,3 +32,5 @@ mongoose
 	.catch(err =>
 		console.log(`${err}, did not connect!`)
 	)
+
+	
