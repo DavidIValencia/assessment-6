@@ -2,6 +2,7 @@ import express, { json } from "express"
 import mongoose from "mongoose"
 import cors from "cors"
 import dotenv from "dotenv"
+import ticketsRouter from "../src/routes/ticketsRouter"
 
 // CONFIGURATIONS
 
@@ -11,6 +12,8 @@ app.use(cors())
 app.use(json())
 
 // ROUTES
+
+app.use("/tickets", ticketsRouter)
 
 // DATABASE CONNECTION
 
